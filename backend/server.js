@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,11 +9,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const SECRET_KEY = "my_super_secret_123!";
+const SECRET_KEY = process.env.SECRET_KEY;
 
 // Connect to MongoDB
 mongoose.connect(
-  "mongodb+srv://hari:oz1mIw9DvJPNB58J@p2auction.o2xyi.mongodb.net/",
+  "mongodb+srv://nithesh:UAGJshWTZsQ34nYr@edunet.7k5jtgj.mongodb.net/",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

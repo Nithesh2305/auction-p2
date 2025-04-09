@@ -6,23 +6,23 @@ function Dashboard() {
   const [items, setItems] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const token = localStorage.getItem("authToken");
-    if (!token) {
-      navigate("/signin"); // Redirect to signin if not authenticated
-      return;
-    }
+  // useEffect(() => {
+  //   const token = localStorage.getItem("authToken");
+  //   if (!token) {
+  //     navigate("/signin"); // Redirect to signin if not authenticated
+  //     return;
+  //   }
 
-    const fetchItems = async () => {
-      try {
-        const res = await axios.get("http://localhost:5001/auctions");
-        setItems(res.data);
-      } catch (error) {
-        console.error("Error fetching auctions:", error);
-      }
-    };
-    fetchItems();
-  }, [navigate]);
+  //   const fetchItems = async () => {
+  //     try {
+  //       const res = await axios.get("http://localhost:5001/auctions");
+  //       setItems(res.data);
+  //     } catch (error) {
+  //       console.error("Error fetching auctions:", error);
+  //     }
+  //   };
+  //   fetchItems();
+  // }, [navigate]);
 
   // 🔹 Handle Logout
   const handleLogout = () => {
