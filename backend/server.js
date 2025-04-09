@@ -13,7 +13,7 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 // Connect to MongoDB
 mongoose.connect(
-  "mongodb+srv://nithesh:UAGJshWTZsQ34nYr@edunet.7k5jtgj.mongodb.net/",
+  "ur mongo db url,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
